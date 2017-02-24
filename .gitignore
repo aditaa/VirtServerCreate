@@ -1,0 +1,8 @@
+#.Gitignore file
+
+#Dont track test or tmp files
+tmp*
+test*
+
+#Dont track config file
+config.php
