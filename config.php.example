@@ -1,0 +1,7 @@
+<?php
+// set vars
+
+$host="https://example.com:1000";
+$username="root";
+$password="password";
+?>
