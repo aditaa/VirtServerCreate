@@ -6,3 +6,6 @@ test*
 
 #Dont track config file
 config.php
+
+#IDE files
+/.netbeans/
