@@ -1,0 +1,23 @@
+#!/bin/bash
+#This script will install VirtServerCreate for you
+
+#Install prerequisites
+yum -y install curl
+yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum -y install https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+yum -y update
+yum -y install php56w php56w-opcache httpd
+
+if [ -x /usr/local/bin/composer ]
+then
+  echo "Found composer -- skiping"
+else
+  echo "Installing composer"
+  #First we install composer
+  curl -sS https://getcomposer.org/installer | php
+  #make the install global
+  mv composer.phar /usr/local/bin/composer
+fi
+
+#Useing composer to install required packages
+composer install
