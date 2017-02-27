@@ -1,5 +1,9 @@
 #.Gitignore file
 
+#Composer entries
+composer.phar
+/vendor/
+
 #Dont track test or tmp files
 tmp*
 test*
