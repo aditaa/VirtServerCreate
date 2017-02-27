@@ -1,5 +1,9 @@
 {
     "require": {
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "monolog/monolog": "^1.22"
+    },
+    "require-dev": {
+        "phplint/phplint": "^0.0.1"
     }
 }
