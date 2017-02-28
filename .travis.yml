@@ -6,7 +6,4 @@ php:
 - hhvm
 install:
   - composer install
-script: find {src,tests} -name "*.php" ! -path '*/NonPHP7.php' -print0 \
-  | xargs -0 -n1 -P8 php -l \
-  | grep -v '^No syntax errors detected' \
-  ; test $? -eq 1
+script: if find . -name "*.php" ! -path "./vendor/*" -exec php -l {} \; | grep "Fatal error"; then exit 1; fi
